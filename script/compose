@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ME="$(basename "${BASH_SOURCE[0]}")"
+MEDIR="${BASH_SOURCE[0]}"
+while [ -h "${MEDIR}" ]; do MEDIR="$(readlink -e "${MEDIR}")"; done
+MEDIR="$(cd -P "$(dirname "${MEDIR}")" && pwd )"
+
+DC_FILE="${MEDIR}/docker-compose.yml"
+exec docker-compose -f "${DC_FILE}" -p spina-efs "$@"

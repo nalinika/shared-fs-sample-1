@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  database:
+    image: postgres:10.5-alpine
+    ports:
+      - 127.0.0.1:5432:5432
+    environment:
+      POSTGRES_DB: dev
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: dev 
