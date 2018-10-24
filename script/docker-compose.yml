@@ -13,10 +13,12 @@ services:
   rails:
     build:
       context: ../
+    environment:
+      SYNC_STDOUT_STDERR: 1
     depends_on:
       - database
     volumes:
       - ../:/app
     ports:
       - 127.0.0.1:3000:3000
-    command: bundle exec rails s
+    command: /app/script/_rails-cmd

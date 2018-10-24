@@ -1,0 +1,5 @@
+#!/bin/sh
+
+rm -f /app/tmp/pids/server.pid
+
+exec bundle exec rails s
