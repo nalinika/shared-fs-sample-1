@@ -24,4 +24,5 @@
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/config/master.key
+# DO NOT UNIGNORE master.key IN YOUR APP!!!
+# /config/master.key
